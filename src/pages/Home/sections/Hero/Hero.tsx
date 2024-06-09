@@ -10,6 +10,14 @@ const Hero = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.up("xs")]: {
+      // <= mobile
+      paddingRop: "100px",
+    },
+    [theme.breakpoints.up("md")]: {
+      // >= mobile
+      paddingTop: "0",
+    },
   }));
   const StyledImg = styled("img")(({ theme }) => ({
     width: "80%",
@@ -29,7 +37,6 @@ const Hero = () => {
                 color="primary.contrastText"
                 variant="h1"
                 textAlign="center"
-                pd={2}
               >
                 João Vitor Reis
               </Typography>
